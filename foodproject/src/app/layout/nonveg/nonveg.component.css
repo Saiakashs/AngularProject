@@ -1,0 +1,43 @@
+.body{
+    background-color: #F2F9FF;
+}
+
+.display-4{
+    color: #16325B;
+    margin:10px 5px;
+    padding: 5px 10px;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px;
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.row1, .row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row2{
+    margin-top: 20px;
+}
+
+footer{
+    position: relative;
+    bottom: -17px;
+}
+
+.footer{
+    color: #7AB2D3;
+    float: right;
+    padding: 15px;
+}
+
+.footer-hr{
+    width: 100%;
+}

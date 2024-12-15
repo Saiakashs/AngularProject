@@ -1,0 +1,79 @@
+<div class="body">
+
+    <header>
+        <app-nav></app-nav>
+    </header>
+
+    <main>
+
+
+        <form [formGroup]="empForm" (ngSubmit)="getData()" class="box">
+            <div>
+                <label>Enter Your First Name:</label>
+                <input type="text" name="fname" formControlName="fname" class="form-control">
+                <div *ngIf="empForm.get('fname').touched && empForm.get('fname').invalid">
+                    <div *ngIf="empForm.get('fname').errors.required" class="alert alert-danger mt-2">
+                        First name is required.
+                    </div>
+                    <div *ngIf="empForm.get('fname').errors.pattern" class="alert alert-danger mt-2">
+                        First name must contain only characters (min: 3, max: 20).
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>Enter Your Last Name:</label>
+                <input type="text" name="lname" formControlName="lname" class="form-control">
+                <div *ngIf="empForm.get('lname').touched && empForm.get('lname').invalid">
+                    <div *ngIf="empForm.get('lname').errors.required" class="alert alert-danger mt-2">
+                        Last name is required.
+                    </div>
+                    <div *ngIf="empForm.get('lname').errors.pattern" class="alert alert-danger mt-2">
+                        Last name must contain only characters (min: 1, max: 10).
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>Enter Your Password:</label>
+                <input type="password" name="password" formControlName="password" class="form-control">
+                <div *ngIf="empForm.get('password').touched && empForm.get('password').invalid">
+                    <div *ngIf="empForm.get('password').errors.required" class="alert alert-danger mt-2">
+                        Password is required.
+                    </div>
+                    <div *ngIf="empForm.get('password').errors.pattern" class="alert alert-danger mt-2">
+                        Password must contain one uppercase character,one lowercase character, one special character and number (min: 8, max: 12).
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-check-label">
+                    <input type="checkbox" name="term" formControlName="term" class="form-check-input">
+                    I Accept terms and conditions
+                </label>
+                <div *ngIf="empForm.get('term').touched && empForm.get('term').invalid">
+                    <div *ngIf="empForm.get('term').errors.required" class="alert alert-danger mt-2">
+                        Please accept terms and conditions.
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </main>
+
+
+    <hr class="footer-hr">
+    <footer>
+        
+        <h3 class="footer">
+            This App is developed by <strong>Sai Kutthalingam S</strong>
+        </h3>
+        
+    </footer>
+    <hr class="footer-hr">
+
+</div>
+
+

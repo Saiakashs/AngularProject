@@ -1,0 +1,117 @@
+<div class="body">
+
+    <header>
+        <app-nav></app-nav>
+    </header>
+
+    <main>
+        <h3 class="display-4">Veg</h3>
+
+        <article class="veg">
+
+            <div class="row1">
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/idly.jpg.crdownload" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/pongal.jpg" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/dosa.jpeg" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+
+            <div class="row2">
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/parotta.jpg" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/rice.webp" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+    
+                <section>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../../../assets/images/chapathi.jpg.crdownload" width="180px" height="180px">
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+
+        </article>
+
+        <article>
+
+            <div class="container">
+                <button class="btn btn-primary me-2 mb-2" routerLink="/productadd">Add</button>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <td>Sr.No</td>
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of productArray">
+                            <td>{{product.id}}</td>
+                            <td>{{product.pname}}</td>
+                            <td>{{product.pprice}}</td>
+                            <td>{{product.pquantity}}</td>
+                            <td>
+                                <button class="btn btn-warning me-2" type="button" [routerLink]="['/productedit',product.id]">Edit</button>
+                                <button class="btn btn-danger" (click)="deleteData(product.id,product.pname)" type="button">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+
+        <hr class="footer-hr">
+        
+            <h3 class="footer">
+                This App is developed by <strong>Sai Kutthalingam S</strong>
+            </h3>
+            
+        <hr class="footer-hr">
+
+    </footer>
+
+</div>

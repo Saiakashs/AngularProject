@@ -1,0 +1,40 @@
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-top: 0px;
+    color: #16325B;
+    padding-left: 5px;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.nb1{
+    margin-left: 50px;
+}
+
+.nb2{
+    margin-left: 30px;
+}
+
+.dropdown-menu{
+    background-color: #F8FAFC;
+}
+
+.dropdown-menu:hover{
+    background-color: #B1F0F7;
+}

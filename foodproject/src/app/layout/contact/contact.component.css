@@ -1,0 +1,21 @@
+.body{
+    background-color: #F2F9FF;
+}
+
+.box{
+    border:2px solid skyblue;
+    width:400px;
+    margin:auto;
+    border-radius:5px;
+    padding:10px;
+}
+
+.footer{
+    color: #7AB2D3;
+    float: right;
+    padding: 15px;
+}
+
+.footer-hr{
+    width: 100%;
+}
